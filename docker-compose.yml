@@ -11,7 +11,7 @@ services:
       - POSTGRES_DB=test
       - POSTGRES_HOST=test
     volumes:
-      - database_p:/var/lib/postgresql/data
+      - database_post:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     logging:
@@ -34,6 +34,8 @@ services:
       - DJANGO_SUPERUSER_USERNAME=admin2
       - DJANGO_SUPERUSER_PASSWORD=pass2
       - DJANGO_SUPERUSER_EMAIL=admin2@example.com
+    volumes:
+      - database_api:/app/core/migrations/
     depends_on:
       - database
     links:
@@ -41,6 +43,7 @@ services:
 
 
 volumes:
-  database_p:
+  database_post:
+  database_api:
 
 

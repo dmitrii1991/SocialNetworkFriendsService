@@ -45,3 +45,4 @@ python manage.py test
 ````shell
 docker-compose up
 ````
+- DjangoVk.postman_collection.json для импорта в постман

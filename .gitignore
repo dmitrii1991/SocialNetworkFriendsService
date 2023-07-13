@@ -1,4 +1,4 @@
 __pycache__
 .pytest_cache
 .git
-core/migrations
+app/core/migrations
